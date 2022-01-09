@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Batman Task</h1>
+</div>
+<hr />
+<div>
+    <form enctype="multipart/form-data" method="post" asp-controller="Home" asp-action="Index">
+        <div class="form-group">
+            <div id="form">
+                <label>The count of numbers is:</label>
+                <input type="number" value="count" min="1" name="countOfNumbers" />
+                <label>The first number to start with is:</label>
+                <input type="number" value="firstNumber" name="startNumber" />
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Calculate" class="btn btn-primary" />
+        </div>
+        <hr />       
+        @ViewBag.result
+    </form>
+</div>
